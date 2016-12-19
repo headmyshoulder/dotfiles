@@ -1,7 +1,9 @@
 // Settings in here override those in "${packages}/DoxyDoxygen/Doxy.sublime-settings",
 // and are overridden in turn by syntax-specific settings.
 {
+   "continuation_on_last_comment": false,
    "doxygen_command_prefix": "\\",
+   "min_spaces_between_columns": [ 1, 2 ],
    "preferred_comments_styles": [
         [
             ["///", "", ""],            // <=> //------------------------
@@ -36,8 +38,8 @@
                     "@_brief"
                 ],
                 "context": [
-                    { "key": "kind",                                             "operator": "regex_match",  "operand": "^(?:var|constant)$" },
-                    { "key": "language",                                         "operator": "regex_match",  "operand": "^(?:json)$" }
+                    { "key": "kind",  "operator": "regex_match",  "operand": "^(?:var|constant)$" },
+                    { "key": "language", "operator": "regex_match",  "operand": "^(?:json)$" }
                 ]
             },
             {
@@ -47,6 +49,11 @@
                     "@brief",
                     "",
                     "@tparam",
+                    "",
+                    "<!--       Null   Out-of-bnds.  Num./geom.  Code path  Works as  -->",
+                    "<!--       ptrs.  indices       cnr. cases  coverage   docum.    -->",
+                    "\\unittest  NA     PASS          NA          PASS       PASS"
+
                 ],
                 "context": [
                     { "key": "kind", "operator": "equal",  "operand": "class"}
@@ -59,6 +66,10 @@
                     "@brief",
                     "",
                     "@tparam",
+                    "",
+                    "<!--       Null   Out-of-bnds.  Num./geom.  Code path  Works as  -->",
+                    "<!--       ptrs.  indices       cnr. cases  coverage   docum.    -->",
+                    "\\unittest  NA     PASS          NA          PASS       PASS"
                 ],
                 "context": [
                     { "key": "kind", "operator": "equal",  "operand": "struct"}
@@ -75,7 +86,7 @@
                     "@return"
                 ],
                 "context": [
-                    { "key": "kind",                                             "operator": "not_equal",  "operand": "" }
+                    { "key": "kind", "operator": "not_equal",  "operand": "" }
                 ]
             }
         ],
