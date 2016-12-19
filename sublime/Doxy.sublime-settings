@@ -1,0 +1,83 @@
+// Settings in here override those in "${packages}/DoxyDoxygen/Doxy.sublime-settings",
+// and are overridden in turn by syntax-specific settings.
+{
+   "doxygen_command_prefix": "\\",
+   "preferred_comments_styles": [
+        [
+            ["///", "", ""],            // <=> //------------------------
+            "///"
+        ],
+        [
+            "/**",
+            " *"
+        ],
+        [
+            ["/*", "-", "*//**"],   // <=> /*-------------------*//**
+            " *"
+        ],
+        // [
+        //     [ "//", "/", "" ],
+        //     [ "//", "/", " ", " ", "/", "//" ],
+        //     [ "", "/", "//" ]
+        // ],
+        [
+            "##",
+            "##"
+        ],
+        [
+            ["#", "-"],             // <=> #-------------------------
+            "##"
+        ]
+      ],
+   "block_layout": {
+        "Doxygen": [
+            {
+                "tags": [
+                    "@_brief"
+                ],
+                "context": [
+                    { "key": "kind",                                             "operator": "regex_match",  "operand": "^(?:var|constant)$" },
+                    { "key": "language",                                         "operator": "regex_match",  "operand": "^(?:json)$" }
+                ]
+            },
+            {
+                "tags": [
+                    "@class            {name}",
+                    "",
+                    "@brief",
+                    "",
+                    "@tparam",
+                ],
+                "context": [
+                    { "key": "kind", "operator": "equal",  "operand": "class"}
+                ]
+            },
+            {
+                "tags": [
+                    "@struct           {name}",
+                    "",
+                    "@brief",
+                    "",
+                    "@tparam",
+                ],
+                "context": [
+                    { "key": "kind", "operator": "equal",  "operand": "struct"}
+                ]
+            },
+            {
+                "tags": [
+                    "@brief",
+                    "",
+                    "@param",
+                    "",
+                    "@tparam",
+                    "",
+                    "@return"
+                ],
+                "context": [
+                    { "key": "kind",                                             "operator": "not_equal",  "operand": "" }
+                ]
+            }
+        ],
+    }
+}

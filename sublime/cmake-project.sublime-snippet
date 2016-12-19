@@ -1,0 +1,22 @@
+<snippet>
+  <content>project($1)
+cmake_minimum_required(VERSION 2.8)
+
+# Add path for custom modules
+set( CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
+
+find_package(Boost REQUIRED)
+
+add_definitions("-std=c++11")
+
+include_directories ( ${Boost_INCLUDE_DIRS} )
+
+add_executable(main main.cpp)
+</content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <!-- <tabTrigger>hello</tabTrigger> -->
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <!-- <scope>source.python</scope> -->
+</snippet>
+
+

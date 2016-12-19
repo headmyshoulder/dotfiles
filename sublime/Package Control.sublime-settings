@@ -1,0 +1,16 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"AutoPEP8",
+		"BracketHighlighter",
+		"Clang Format",
+		"CMake",
+		"DoxyDoxygen",
+		"LaTeXTools",
+		"Package Control"
+	]
+}
