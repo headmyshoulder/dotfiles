@@ -1,5 +1,6 @@
 <snippet>
-  <content>project($1)
+  <content><![CDATA[
+    project($1)
 cmake_minimum_required(VERSION 2.8)
 
 # Add path for custom modules
@@ -12,7 +13,7 @@ add_definitions("-std=c++11")
 include_directories ( ${Boost_INCLUDE_DIRS} )
 
 add_executable(main main.cpp)
-</content>
+]]></content>
   <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
   <!-- <tabTrigger>hello</tabTrigger> -->
   <!-- Optional: Set a scope to limit where the snippet will trigger -->
