@@ -5,6 +5,7 @@
 	],
 	"installed_packages":
 	[
+		"AutoSpell",
 		"AutoPEP8",
 		"BracketHighlighter",
 		"Clang Format",
