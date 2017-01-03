@@ -11,6 +11,9 @@
 		"CMake",
 		"DoxyDoxygen",
 		"LaTeXTools",
-		"Package Control"
+		"Markdown Preview",
+		"MarkdownEditing",
+		"Package Control",
+		"Processing"
 	]
 }
