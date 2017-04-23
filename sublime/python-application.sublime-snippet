@@ -2,7 +2,7 @@
   <content><![CDATA[
 #! /usr/bin/env python
 
-""" $FILENAME """
+""" $1 """
 
 __author__ = "Karsten Ahnert"
 __email__ = "karsten.ahnert@gmx.de"
