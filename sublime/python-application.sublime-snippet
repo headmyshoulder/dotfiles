@@ -1,0 +1,45 @@
+<snippet>
+  <content><![CDATA[
+#! /usr/bin/env python
+
+""" $FILENAME """
+
+__author__ = "Karsten Ahnert"
+__email__ = "karsten.ahnert@gmx.de"
+
+import argparse
+import logging
+import os
+import sys
+
+
+def parse_cmd(argv):
+    parser = argparse.ArgumentParser(description="Application description")
+    parser.add_argument("-l", "--logfile", help="Logile")
+    args = parser.parse_args(argv[1:])
+    return args
+
+
+def init_logging(args):
+    format_string = '[%(levelname)s][%(asctime)s] : %(message)s'
+    log_level = logging.INFO
+    logging.basicConfig(format=format_string, level=log_level, datefmt='%Y-%m-%d %I:%M:%S')
+    if args.logfile:
+        ch = logging.FileHandler(args.logfile, "w")
+        ch.setLevel(log_level)
+        ch.setFormatter(logging.Formatter(format_string, datefmt='%Y-%m-%d %I:%M:%S'))
+        logging.getLogger().addHandler(ch)
+
+
+def main(argv):
+    args = parse_cmd(argv)
+    init_logging(args)
+
+if __name__ == "__main__":
+    main(sys.argv)
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <!-- <tabTrigger>hello</tabTrigger> -->
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <!-- <scope>source.python</scope> -->
+</snippet>

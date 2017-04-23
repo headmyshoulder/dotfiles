@@ -5,16 +5,21 @@
 	],
 	"installed_packages":
 	[
-		"AutoSpell",
 		"AutoPEP8",
+		"AutoSpell",
 		"BracketHighlighter",
+		"C++ Snippets",
 		"Clang Format",
 		"CMake",
+		"CMakeSnippets",
 		"DoxyDoxygen",
+		"LaTeX Snippets",
 		"LaTeXTools",
 		"Markdown Preview",
 		"MarkdownEditing",
 		"Package Control",
-		"Processing"
+		"Processing",
+		"SideBarEnhancements",
+		"SnippetMaker"
 	]
 }
