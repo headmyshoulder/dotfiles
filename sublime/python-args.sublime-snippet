@@ -1,0 +1,15 @@
+<snippet>
+  <!-- Example: Hello, ${1:this} is a ${2:snippet}. -->
+  <content><![CDATA[
+def parse_cmd(argv):
+    parser = argparse.ArgumentParser(description="Application description")
+    parser.add_argument("-l", "--logfile", help="Logile")
+    args = parser.parse_args(argv[1:])
+    return args
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>python-args</tabTrigger>
+  <description>python-args</description>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <!-- <scope>source.python, comment.block.documentation.python</scope> -->
+</snippet>

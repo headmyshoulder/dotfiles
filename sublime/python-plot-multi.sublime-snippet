@@ -1,0 +1,36 @@
+<snippet>
+  <!-- Example: Hello, ${1:this} is a ${2:snippet}. -->
+  <content><![CDATA[
+import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
+
+df = pd.read_csv(input, header=None, sep="\t")
+plt.figure(1)
+plt.subplot(211)
+plt.plot(df[0], df[1], "ro-", label="Label1")
+plt.plot(df[0], df[2], "bo-", label="Label2")
+plt.axis([100 200 1 10])
+plt.ylabel("YLabel1")
+plt.xscale("log")
+plt.yscale("log")
+plt.legend(loc=4, prop={'size': 10})
+plt.xticks([2, 4, 8, 16, 32, 64, 128, 256, 512], "")
+
+plt.subplot(212)
+plt.plot(df[0], df[1] / df[2], "ro-", label="Label")
+plt.axis([100 200 1 10])
+plt.xlabel("YLabel2")
+plt.ylabel("XLabel")
+plt.xscale("log")
+plt.legend(loc=1, prop={'size': 10})
+
+plt.savefig(output)
+plt.show()
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>python-plot-multi</tabTrigger>
+  <description>python-plot-multi</description>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <!-- <scope>source.python</scope> -->
+</snippet>

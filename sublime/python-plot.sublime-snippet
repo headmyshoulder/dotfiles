@@ -1,0 +1,24 @@
+<snippet>
+  <!-- Example: Hello, ${1:this} is a ${2:snippet}. -->
+  <content><![CDATA[
+import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
+
+df = pd.read_csv(input, header=None, sep="\t")
+plt.plot(df[0], df[1], "ro-", label="Label1")
+plt.axis([100 200 1 10])
+plt.xlabel("XLabel")
+plt.ylabel("YLabel ")
+plt.xscale("log")
+plt.yscale("log")
+plt.legend(loc=4)
+plt.savefig(output)
+plt.show()
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>python-plot</tabTrigger>
+  <description>python-plot</description>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <!-- <scope>source.python</scope> -->
+</snippet>
